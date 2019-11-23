@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parametros>
+  <Servidor>Delio</Servidor>
+  <BaseDatos>BDMatricula</BaseDatos>
+  <Usuario>Delito14</Usuario>
+  <Clave>User3_123</Clave>
+  <SeguridadIntegrada>Si</SeguridadIntegrada>
+</Parametros>

@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="frmPrincipal.master.cs" Inherits="WebCineclub.frmPrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 98%;
+        }
+        .auto-style2 {
+            width: 100%;
+        }
+        .auto-style3 {
+            width: 95%;
+            height: 113px;
+        }
+        .auto-style5 {
+            width: 20%;
+            height: 77px;
+        }
+        .auto-style6 {
+            height: 77px;
+        }
+        .auto-style7 {
+            text-align: center;
+            color: #FFFFCC;
+            font-size: x-large;
+            background-color: #FF6600;
+        }
+        .auto-style8 {
+            width: 20%;
+            height: 223px;
+        }
+        .auto-style9 {
+            height: 223px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table align="center" class="auto-style1" style="border: 1px solid #FF6600">
+                <tr>
+                    <td class="auto-style5">
+                        <img alt="" class="auto-style3" src="Imagenes/cineclub.png" style="border: 2px solid #FF3300;" width="95%" /></td>
+                    <td class="auto-style6">
+                        <asp:ContentPlaceHolder ID="Encabezado" runat="server">
+                            <table class="auto-style2">
+                                <tr>
+                                    <td class="auto-style7" style="font-family: ALGerian">CINECLUB TU PELÍCULA</td>
+                                </tr>
+                            </table>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style8">
+                        <asp:ContentPlaceHolder ID="Menu" runat="server">
+                            <table class="auto-style2">
+                                <tr>
+                                    <td>
+                                        <asp:TreeView ID="trvMenuPpal" runat="server" BackColor="#CCCCCC" ExpandDepth="0" ImageSet="Msdn" NodeIndent="10">
+                                            <HoverNodeStyle BackColor="#FF6600" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" Font-Underline="False" />
+                                            <Nodes>
+                                                <asp:TreeNode ImageUrl="~/Imagenes/pelicula.png" NavigateUrl="~/frmInicio.aspx" Text="Inicio/Cineclub" Value="mnuInicio">
+                                                    <asp:TreeNode Text="Pelicula" Value="opcPelicula">
+                                                        <asp:TreeNode NavigateUrl="~/frmPelicula.aspx" Text="Info.Peliculas" Value="opcPeliculas"></asp:TreeNode>
+                                                    </asp:TreeNode>
+                                                    <asp:TreeNode Text="Peli-Actores" Value="Peli-Actores">
+                                                        <asp:TreeNode NavigateUrl="~/frmActor.aspx" Text="Actores" Value="opcActores"></asp:TreeNode>
+                                                    </asp:TreeNode>
+                                                </asp:TreeNode>
+                                            </Nodes>
+                                            <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                                            <ParentNodeStyle Font-Bold="True" ForeColor="#5555DD" />
+                                            <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" VerticalPadding="0px" />
+                                        </asp:TreeView>
+                                    </td>
+                                </tr>
+                            </table>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td class="auto-style9">
+                        <asp:ContentPlaceHolder ID="Cuerpo" runat="server">
+                            <asp:ScriptManager ID="ScriptManager1" runat="server">
+                            </asp:ScriptManager>
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            </asp:UpdatePanel>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
